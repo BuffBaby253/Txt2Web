@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Text File Display</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Text File Content</h1>
+      <p id="text-content"></p>
+    </div>
+
+    <script>
+      // Fetch the text file
+      fetch("text.txt")
+        .then((response) => response.text())
+        .then((text) => {
+          document.getElementById("text-content").textContent = text;
+        });
+    </script>
+  </body>
+</html>
